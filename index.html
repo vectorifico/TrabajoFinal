@@ -95,9 +95,10 @@
       }
       todasFilas[0]=FilaMod;
       datos.push(todasFilas);
+      FilaMod =""
       for(let fila=1;fila<todasFilas.length;fila++){
         Encabezados = todasFilas[fila].split(';');
-        let FilaMod =""
+         FilaMod =""
         for(let col=0;col<Encabezados.length;col++)  {
           if(fila!=0){
             if(col==columnaCiudad){
@@ -116,9 +117,10 @@
             }
           }
         }
+        console.log(todasFilas[fila])
         datos.push(todasFilas);
       }
-
+/*
       const nombreArchivo= 'Departamentos.csv'
       const a= document.createElement("a")
       const contenido= datos.join("\n"), blob=new Blob([contenido],{type: "octet/strean"}),
@@ -127,7 +129,7 @@
       a.download =nombreArchivo;
       a.click();
       window.URL.revokeObjectURL(url);
-      
+ */     
     }
 
 
