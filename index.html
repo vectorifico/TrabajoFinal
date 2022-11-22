@@ -94,7 +94,8 @@
         }
       }
       todasFilas[0]=FilaMod;
-      datos.push(todasFilas);
+      datos.push(FilaMod);
+      //console.log(FilaMod)
       FilaMod =""
       for(let fila=1;fila<todasFilas.length;fila++){
         Encabezados = todasFilas[fila].split(';');
@@ -117,11 +118,12 @@
             }
           }
         }
-        console.log(todasFilas[fila])
-        datos.push(todasFilas);
+   //     console.log(fila)
+    //    console.log(FilaMod)
+        datos.push(FilaMod);
       }
-/*
-      const nombreArchivo= 'Departamentos.csv'
+
+      const nombreArchivo= 'DepartamentosPrueba.csv'
       const a= document.createElement("a")
       const contenido= datos.join("\n"), blob=new Blob([contenido],{type: "octet/strean"}),
       url = window.URL.createObjectURL(blob);
@@ -129,7 +131,7 @@
       a.download =nombreArchivo;
       a.click();
       window.URL.revokeObjectURL(url);
- */     
+ 
     }
 
 
