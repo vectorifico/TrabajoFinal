@@ -119,8 +119,15 @@
         datos.push(todasFilas);
       }
 
+      const nombreArchivo= 'Departamentos.csv'
+      const a= document.createElement("a")
+      const contenido= datos.join("\n"), blob=new Blob([contenido],{type: "octet/strean"}),
+      url = window.URL.createObjectURL(blob);
+      a.href =url;
+      a.download =nombreArchivo;
+      a.click();
+      window.URL.revokeObjectURL(url);
       
-      console.log(datosCsv)
     }
 
 
